@@ -62,6 +62,10 @@ app.use(express.json());
 const authRoutes = require('./routes/auth.route');
 app.use('/api/v1/auth', authRoutes);
 
+
+const userRoutes = require('./routes/user.route');
+app.use('/api/v1/user', userRoutes);
+
 app.get('/', (req, res) => {
     res.status(200).send('App works without routes');
 });
