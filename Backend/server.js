@@ -42,13 +42,6 @@
 
 // module.exports = app;
 
-
-const express = require('express');
-
-const app = express();
-
-app.get('/', (req, res) => {
-    res.status(200).send('Express works');
-});
+const app = require('./src/app');
 
 module.exports = app;
