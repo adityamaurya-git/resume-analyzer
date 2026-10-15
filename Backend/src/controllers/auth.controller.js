@@ -7,7 +7,7 @@ const blacklistTokenModel = require('../models/blacklist.model');
 /**
  * @name registerUser
  * @description register a new user, expects username , email and password in req
- * @access Public
+ * @access public
  */
 
 const registerUser = async (req, res) =>{
@@ -85,7 +85,7 @@ const registerUser = async (req, res) =>{
 /**
  * @name loginUser
  * @description login a user, expects username or email and password in req
- * @access Public
+ * @access public
  */
 
 const loginUser = async (req, res) =>{
@@ -152,7 +152,7 @@ const loginUser = async (req, res) =>{
 /**
  * @name logoutUser
  * @description logout a user , removes the token
- * @access Public
+ * @access private
  */
 
 const logoutUser = async (req, res) =>{
