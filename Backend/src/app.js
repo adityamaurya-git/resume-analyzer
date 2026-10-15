@@ -34,4 +34,8 @@ app.use('/api/v1/user' , userRoutes);
 app.use('/api/v1/report', reportRoutes);
 
 
+app.get('/', (req, res) =>{
+    res.send("resume is running");
+})
+
 module.exports = app;
