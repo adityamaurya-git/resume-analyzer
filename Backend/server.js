@@ -43,13 +43,10 @@
 // module.exports = app;
 
 
-const app = require('./src/app');
-
-app.get('/health', (req, res) => {
+module.exports = (req, res) => {
     res.status(200).json({
         status: 'ok',
-        message: 'Express function is running'
+        message: 'Vercel function is running',
+        path: req.url
     });
-});
-
-module.exports = app;
+};
