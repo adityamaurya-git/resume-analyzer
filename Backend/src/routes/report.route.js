@@ -5,7 +5,7 @@ const router = express.Router();
 // ----------------------------
 // CONTROLLER:-
 // ----------------------------
-// const { generateReport, getReportById, getAllReport } = require('../controllers/report.controller');
+const { generateReport, getReportById, getAllReport } = require('../controllers/report.controller');
 
 // ----------------------------
 // MIDDLEWARES:-
