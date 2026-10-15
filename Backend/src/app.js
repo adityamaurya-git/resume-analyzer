@@ -18,8 +18,14 @@ const reportRoutes = require('./routes/report.route');
 
 app.use(express.json());
 app.use(cookieParser());
+
+const allowedOrigins = [
+    'http://localhost:5173',
+    process.env.FRONTEND_URL
+].filter(Boolean);
+
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:allowedOrigins,
     credentials:true
 }))
 
@@ -34,8 +40,13 @@ app.use('/api/v1/user' , userRoutes);
 app.use('/api/v1/report', reportRoutes);
 
 
+
+// ------------------------
+// HEALTH CHECK:-
+// ------------------------
+
 app.get('/', (req, res) =>{
-    res.send("resume is running");
+    res.status(200).send("Backend is running");
 })
 
 module.exports = app;
