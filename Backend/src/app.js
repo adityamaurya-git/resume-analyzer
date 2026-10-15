@@ -59,6 +59,9 @@ const app = express();
 
 app.use(express.json());
 
+const authRoutes = require('./routes/auth.route');
+app.use('/api/v1/auth', authRoutes);
+
 app.get('/', (req, res) => {
     res.status(200).send('App works without routes');
 });
