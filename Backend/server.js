@@ -43,10 +43,6 @@
 // module.exports = app;
 
 
-module.exports = (req, res) => {
-    res.status(200).json({
-        status: 'ok',
-        message: 'Vercel function is running',
-        path: req.url
-    });
-};
+const app = require('./src/app');
+
+module.exports = app;
