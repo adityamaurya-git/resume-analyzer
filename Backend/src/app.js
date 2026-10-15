@@ -66,6 +66,10 @@ app.use('/api/v1/auth', authRoutes);
 const userRoutes = require('./routes/user.route');
 app.use('/api/v1/user', userRoutes);
 
+
+const reportRoutes = require('./routes/report.route');
+app.use('/api/v1/report', reportRoutes);
+
 app.get('/', (req, res) => {
     res.status(200).send('App works without routes');
 });
